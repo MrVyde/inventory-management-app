@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Category Items</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body class="page">
+
+<div class="container">
+
+<h2 class="page-title"><%= category.name %></h2>
+<p class="category-description"><%= category.description %></p>
+
+<hr class="divider">
+
+<h3>Items in this category:</h3>
+
+<div class="top-actions">
+<a class="btn add-btn" href="/items/new?category=<%= category.id %>">+ Add New Item</a>
+<a class="btn back-btn" href="/">Back to Category</a>
+</div>
+
+<hr class="divider">
+
+<% if (items.length === 0) { %>
+  <p class="empty-message">No items in this category yet.</p>
+<% } %>
+
+<% items.forEach(item => { %>
+  <div class="card">
+
+    <h4 class="card-title"><%= item.name %></h4>
+
+    <div class="actions">
+      <a class="btn view" href="/items/<%= item.id %>">View</a>
+      <a class="btn edit" href="/items/<%= item.id %>/edit">Edit</a>
+
+      <form action="/items/<%= item.id %>/delete" method="POST" style="display:inline;">
+        <button class="btn delete" type="submit">Delete</button>
+      </form>
+    </div>
+
+  </div>
+<% }) %>
+
+</div>
+
+</body>
+</html>

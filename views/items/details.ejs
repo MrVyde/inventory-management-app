@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Item Details</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body class="page">
+
+<div class="container">
+
+<h2 class="page-title"><%= item.name %></h2>
+
+<a class="btn back-btn" href="/categories/details/<%= category.id %>">Back to Items</a>
+
+<div class="card item-details">
+
+<p><strong>Description:</strong> <%= item.description %></p>
+<p><strong>Price:</strong> $<%= item.price %></p>
+<p><strong>Quantity:</strong> <%= item.quantity %></p>
+<p><strong>Category:</strong> <%= item.category_name %></p>
+
+</div>
+
+<hr class="divider">
+
+<div class="actions">
+
+<a class="btn edit" href="/items/<%= item.id %>/edit">Edit</a>
+
+<form action="/items/<%= item.id %>/delete" method="POST" style="display:inline;">
+  <button class="btn delete" type="submit">Delete</button>
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
