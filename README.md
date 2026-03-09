@@ -6,9 +6,7 @@ A Node.js inventory management app for a musical instruments store, built with E
 
 The app is deployed on Render using a Supabase PostgreSQL database:
 
-View Inventory App on Render
-
-(Replace with actual deployment link)
+[View Inventory App on Render](https://inventory-management-app-jb4e.onrender.com)
 
 ## Features
 
