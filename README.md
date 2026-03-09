@@ -16,7 +16,7 @@ Musical instrument categories: Strings, Percussion, Keyboards, Wind Instruments.
 
 Items belong to categories.
 
-Full CRUD support for both categories and items:
+### Full CRUD support for both categories and items:
 
 Create: Add new category or item.
 
@@ -26,13 +26,13 @@ Update: Edit category or item details.
 
 Delete: Remove categories (only if no items exist) or items.
 
-#### Validation
+### Validation
 
 Basic validation for item fields (e.g., name, price, quantity).
 
 Prevent deleting categories with items (foreign key ON DELETE RESTRICT).
 
-##### Search & Filtering (optional in future)
+### Search & Filtering (optional in future)
 
 Can be extended to filter items by category, brand, or name.
 
